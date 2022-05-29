@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        android:padding="30dp"
+        >
+        <ImageView
+            android:id="@+id/backr"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="100dp"
+            android:text="Register"
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/nametxtr"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Name"
+            android:textSize="20dp"
+            android:layout_marginTop="150dp"/>
+
+        <EditText
+            android:id="@+id/namer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/nametxtr"
+            android:layout_marginBottom="-40dp"
+            android:inputType="text" />
+        <TextView
+            android:id="@+id/Emailtxtr"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Email-Id"
+            android:textSize="20dp"
+            android:layout_alignBottom="@id/namer"
+            android:layout_marginBottom="-30dp"/>
+
+        <EditText
+            android:id="@+id/emailt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/Emailtxtr"
+            android:layout_marginBottom="-40dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="password"
+            android:textSize="20dp"
+            android:id="@+id/passr"
+            android:layout_alignBottom="@id/emailt"
+            android:layout_marginBottom="-30dp"/>
+
+        <EditText
+            android:id="@+id/passt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/passr"
+            android:layout_marginBottom="-40dp"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/logina"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/passt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-60dp"
+            android:text="Already Had Account|Login" />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button"
+            android:padding="10dp"
+            android:text="Register"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="540dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logina"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+
+</RelativeLayout>
