@@ -17,8 +17,11 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
-import com.google.android.gms.location.*
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationCallback
+import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationRequest.PRIORITY_HIGH_ACCURACY
+import com.google.firebase.auth.FirebaseAuth
 import com.techmihirnaik.mergeroommate.databinding.ActivityMainBinding
 import com.techmihirnaik.mergeroommate.location.GetAddressIntentService
 import com.techmihirnaik.mergeroommate.ui.HomeFragment
@@ -34,6 +37,7 @@ class MainActivity : AppCompatActivity() {
     private var currentAddTv: TextView? = null
     private var currentLocation: Location? = null
     private var locationCallback: LocationCallback? = null
+    private val TAG = "com.techmihirnaik.mergeroommate.MainActivity"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,17 +45,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        notificationImage = findViewById(R.id.iv_notification)
+        Log.d(TAG, "${FirebaseAuth.getInstance().currentUser?.uid}")
 
         setSupportActionBar(findViewById(R.id.ggtool))
+        notificationImage = findViewById(R.id.iv_notification)
 
         bottomNavigation = binding.bottomNavigation
-        bottomNavigation.add(MeowBottomNavigation.Model(0,R.drawable.ic_home))
-        bottomNavigation.add(MeowBottomNavigation.Model(1,R.drawable.ic_explore))
+        bottomNavigation.add(MeowBottomNavigation.Model(0, R.drawable.ic_home))
+        bottomNavigation.add(MeowBottomNavigation.Model(1, R.drawable.ic_explore))
         bottomNavigation.add(MeowBottomNavigation.Model(2, R.drawable.ic_suitcase_1))
-        bottomNavigation.add(MeowBottomNavigation.Model(3,R.drawable.ic_settings))
+        bottomNavigation.add(MeowBottomNavigation.Model(3, R.drawable.ic_settings))
 
-        bottomNavigation.show(0,true)
+        bottomNavigation.show(0, true)
         replaceFragment(HomeFragment.newInstance())
         bottomNavigation.setOnClickMenuListener {
             when (it.id) {
@@ -75,11 +80,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            notificationImage.setOnClickListener {
-                startActivity(Intent(this, NotificationActivity::class.java))
-            }
-
         }
+        notificationImage.setOnClickListener {
+            startActivity(Intent(this, NotificationActivity::class.java))
+        }
+
 
 //        //Address fetching
 //        addressResultReceiver = LocationAddressResultReceiver(Handler())
@@ -130,7 +135,7 @@ class MainActivity : AppCompatActivity() {
             locationRequest.fastestInterval = 2000
             locationRequest.fastestInterval = 1000
             locationRequest.priority = PRIORITY_HIGH_ACCURACY
-            fusedLocationClient!!.requestLocationUpdates(locationRequest, locationCallback, null)
+//            fusedLocationClient!!.requestLocationUpdates(locationRequest, locationCallback, null)
         }
     }
 
@@ -194,7 +199,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        fusedLocationClient!!.removeLocationUpdates(locationCallback)
+//        fusedLocationClient!!.removeLocationUpdates(locationCallback)
     }
 
 

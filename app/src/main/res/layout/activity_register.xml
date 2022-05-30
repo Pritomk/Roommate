@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    tools:context=".authentication.RegisterActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="540dp"
@@ -86,12 +86,12 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/button"
+            android:background="@drawable/login_click"
             android:padding="10dp"
             android:text="Register"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
