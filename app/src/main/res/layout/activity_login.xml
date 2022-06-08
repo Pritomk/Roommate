@@ -92,11 +92,27 @@
             android:textSize="30sp" />
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/googleSignIn_tv"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/red"
+        android:background="@drawable/register_button_bg"
+        android:text="Google"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:fontFamily="@font/ubuntu"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_above="@id/rl2"/>
+
     <RelativeLayout
+        android:id="@+id/rl2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="440dp"
-        >
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true">
 
         <ImageView
             android:layout_width="match_parent"
@@ -106,6 +122,10 @@
     </RelativeLayout>
 
 
-
-
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 </RelativeLayout>

@@ -26,6 +26,7 @@ import com.techmihirnaik.mergeroommate.databinding.ActivityMainBinding
 import com.techmihirnaik.mergeroommate.location.GetAddressIntentService
 import com.techmihirnaik.mergeroommate.ui.HomeFragment
 import com.techmihirnaik.mergeroommate.ui.myTrips.MyTripsFragment
+import com.techmihirnaik.mergeroommate.ui.profile.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -69,12 +70,9 @@ class MainActivity : AppCompatActivity() {
                 2 -> {
                     replaceFragment(MyTripsFragment.newInstance())
                 }
-//                3 -> {
-//                    replaceFragment(NotificationFragment.newInstance())
-//                }
-//                4 -> {
-//                    replaceFragment(UserFragment.newInstance())
-//                }
+                3 -> {
+                    replaceFragment(ProfileFragment.newInstance())
+                }
                 else -> {
                     replaceFragment(HomeFragment.newInstance())
                 }
