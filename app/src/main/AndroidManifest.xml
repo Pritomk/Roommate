@@ -39,6 +39,15 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".schedule.DatePicker"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".schedule.AddTravellers"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".schedule.SearchHotels"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".schedule.Schedule"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
