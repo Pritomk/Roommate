@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.d(TAG, "${FirebaseAuth.getInstance().currentUser?.uid}")
 
-        setSupportActionBar(findViewById(R.id.ggtool))
+//        setSupportActionBar(findViewById(R.id.ggtool))
         notificationImage = findViewById(R.id.iv_notification)
 
         bottomNavigation = binding.bottomNavigation
