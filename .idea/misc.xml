@@ -23,6 +23,33 @@
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/menu/bottommenu.xml" value="0.1" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/menu/menu.xml" value="0.1" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/menu/search_menu.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/addtravellers.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/button_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/c_baseline_home_work_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/count_night_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/counter_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/dateshape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/hotel.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_home_work_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_my_location_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_remove.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rectangle_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/round.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/select_india_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_initial.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/activity_notification.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/cardview.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/custom_toolbar.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/date_picker.xml" value="0.1539855072463768" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/schedule.xml" value="0.1539855072463768" />
+        <entry key="app/src/main/res/layout/search_hotels.xml" value="0.29257907542579076" />
+        <entry key="app/src/main/res/layout/travellers_add.xml" value="0.1539855072463768" />
       </map>
     </option>
   </component>
