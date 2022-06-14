@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cab.CabActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:background="@drawable/rounded_corner_bg"
+        android:backgroundTint="#9053A4A6"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="35"
+                android:fontFamily="@font/ubuntu"
+                android:text="To"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_weight="65"
+                android:background="@drawable/searchbox_bg"
+                android:fontFamily="@font/ubuntu"
+                android:hint="Search Here"
+                android:padding="4dp"
+                android:textSize="24sp"
+                tools:text="Search Text"
+                android:textFontWeight="10"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="35"
+                android:fontFamily="@font/ubuntu"
+                android:text="From"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_weight="65"
+                android:background="@drawable/searchbox_bg"
+                android:fontFamily="@font/ubuntu"
+                android:hint="Search Here"
+                android:padding="4dp"
+                android:textSize="24sp"
+                tools:text="Search Text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="14/06/2022"
+                android:textSize="24sp"
+                android:background="@drawable/rounded_corner_bg"
+                android:backgroundTint="@color/brown"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu"
+                android:layout_weight="40"
+                android:layout_gravity="center"/>
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:layout_weight="20"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2:30 pm"
+                android:textSize="24sp"
+                android:background="@drawable/rounded_corner_bg"
+                android:backgroundTint="@color/brown"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu"
+                android:layout_weight="40"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_marginTop="32dp"/>
+        
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#9053A4A6"
+                android:background="@drawable/rounded_corner_bg"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_pirates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radio_select_changer"
+                    android:checked="true"
+                    android:text="SUV"
+                    android:textSize="36sp"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_ninjas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/radio_select_changer"
+                    android:button="@android:color/transparent"
+                    android:text="Sudan"
+                    android:textSize="36sp"
+                    android:padding="8dp"/>
+            </RadioGroup>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

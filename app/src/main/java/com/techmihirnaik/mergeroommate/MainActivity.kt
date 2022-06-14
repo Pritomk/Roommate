@@ -12,6 +12,7 @@ import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.firebase.auth.FirebaseAuth
+import com.techmihirnaik.mergeroommate.cab.CabActivity
 import com.techmihirnaik.mergeroommate.databinding.ActivityMainBinding
 import com.techmihirnaik.mergeroommate.ui.HomeFragment
 import com.techmihirnaik.mergeroommate.ui.myTrips.MyTripsFragment
@@ -70,7 +71,8 @@ class MainActivity : AppCompatActivity() {
 
         }
         notificationImage.setOnClickListener {
-            startActivity(Intent(this, NotificationActivity::class.java))
+//            startActivity(Intent(this, NotificationActivity::class.java))
+            startActivity(Intent(this, CabActivity::class.java))
         }
 
     }
