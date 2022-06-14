@@ -16,7 +16,7 @@ class AddTravellers:AppCompatActivity() {
 
 
         binding.BackHostel.setOnClickListener {
-            val intent=Intent(this,Schedule::class.java)
+            val intent=Intent(this,ScheduleActivity::class.java)
             startActivity(intent)
         }
 
@@ -87,7 +87,7 @@ class AddTravellers:AppCompatActivity() {
         //go to schedule page with data
         binding.doneRoomCount.setOnClickListener {
 
-            val intent=Intent(this,Schedule::class.java)
+            val intent=Intent(this,ScheduleActivity::class.java)
             intent.putExtra("room",roomCount)
             intent.putExtra("adult",adultCount)
             intent.putExtra("children",childrenCount)

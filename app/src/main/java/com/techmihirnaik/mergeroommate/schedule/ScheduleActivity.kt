@@ -5,19 +5,16 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
 import com.techmihirnaik.mergeroommate.R
-import com.techmihirnaik.mergeroommate.databinding.FragmentHomeBinding
-import com.techmihirnaik.mergeroommate.databinding.ScheduleBinding
+import com.techmihirnaik.mergeroommate.databinding.ActivityScheduleBinding
 import com.techmihirnaik.mergeroommate.ui.HomeFragment
 import java.util.*
 
-class Schedule : AppCompatActivity() {
-    private lateinit var binding: ScheduleBinding
+class ScheduleActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityScheduleBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.schedule)
-
+        binding = ActivityScheduleBinding.inflate(layoutInflater)
 
         //go back home
         binding.BackHome.setOnClickListener {

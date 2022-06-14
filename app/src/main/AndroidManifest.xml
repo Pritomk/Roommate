@@ -46,7 +46,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".schedule.SearchHotels"
             android:screenOrientation="portrait"/>
-        <activity android:name=".schedule.Schedule"
+        <activity android:name=".schedule.ScheduleActivity"
             android:screenOrientation="portrait"/>
     </application>
 

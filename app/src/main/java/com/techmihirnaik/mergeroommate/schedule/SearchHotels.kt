@@ -17,7 +17,7 @@ class SearchHotels : AppCompatActivity() {
 
 
         binding.backHostel.setOnClickListener {
-            val intent= Intent(this,Schedule::class.java)
+            val intent= Intent(this,ScheduleActivity::class.java)
             startActivity(intent)
         }
 

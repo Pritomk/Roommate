@@ -27,7 +27,7 @@ class DatePicker : AppCompatActivity() {
 
 
         binding.BackHostel.setOnClickListener {
-            val intent = Intent(this, Schedule::class.java)
+            val intent = Intent(this, ScheduleActivity::class.java)
             startActivity(intent)
         }
 
@@ -170,7 +170,7 @@ class DatePicker : AppCompatActivity() {
                 if (list[0].cOutDate_2 !="0" && r==0) {
                     val cOut=list[0].cOutDate_2
                     binding.doneDate.setOnClickListener {
-                        val intent = Intent(this, Schedule::class.java)
+                        val intent = Intent(this, ScheduleActivity::class.java)
                         intent.putExtra("checkIn", dateInWord)
                         intent.putExtra("checkOut", cOut)
                         startActivity(intent)
@@ -182,7 +182,7 @@ class DatePicker : AppCompatActivity() {
                     val cIn=list[1].cInDate_1
                     val cOut=list[0].cOutDate_2
                     binding.doneDate.setOnClickListener {
-                        val intent = Intent(this, Schedule::class.java)
+                        val intent = Intent(this, ScheduleActivity::class.java)
                         intent.putExtra("checkIn", cIn)
                         intent.putExtra("checkOut", cOut)
                         startActivity(intent)
