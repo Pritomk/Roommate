@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.techmihirnaik.mergeroommate.cab.CabActivity
 import com.techmihirnaik.mergeroommate.databinding.FragmentHomeBinding
 import com.techmihirnaik.mergeroommate.schedule.ScheduleActivity
 
@@ -24,6 +25,11 @@ class HomeFragment : Fragment() {
 
          binding.hotels.setOnClickListener {
             val intent= Intent(context, ScheduleActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.ivCabBtn.setOnClickListener {
+            val intent = Intent(requireContext(), CabActivity::class.java)
             startActivity(intent)
         }
 

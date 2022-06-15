@@ -15,7 +15,7 @@ class ScheduleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityScheduleBinding.inflate(layoutInflater)
-
+        setContentView(binding.root )
         //go back home
         binding.BackHome.setOnClickListener {
             val intent = Intent(this, HomeFragment::class.java)

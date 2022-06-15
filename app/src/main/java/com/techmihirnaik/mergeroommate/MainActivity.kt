@@ -71,8 +71,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         notificationImage.setOnClickListener {
-//            startActivity(Intent(this, NotificationActivity::class.java))
-            startActivity(Intent(this, CabActivity::class.java))
+            startActivity(Intent(this, NotificationActivity::class.java))
         }
 
     }
