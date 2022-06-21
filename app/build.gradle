@@ -79,6 +79,10 @@ dependencies {
 
     implementation("androidx.multidex:multidex:2.0.1")
 
+    //Maps my India api dependency
+    implementation "com.google.code.gson:gson:2.8.9"
+    implementation 'com.mapmyindia.sdk:place-widget:1.6.0'
+
 
 
 }

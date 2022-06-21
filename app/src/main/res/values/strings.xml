@@ -2,10 +2,26 @@
     <string name="app_name">MergeRoommate</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="place_api_key">AIzaSyA63c2iuv1OkF_Yb0sEHJ9te20ZgnCyPR8</string>
+
+    <string name="REST_api_key">d47fd9e0519c92385dcb25e101c09a95</string>
+    <string name="map_sdk_key">d47fd9e0519c92385dcb25e101c09a95</string>
+    <string name="client_id">33OkryzDZsIwRExUeQxLJzstMd2LGn72_SL8liSHmCrcSUK-7E3FM2zcn_VYoFeX6latOqr751dsqe8lneteEeBGXiT_yQ_C</string>
+    <string name="client_secret_key">lrFxI-iSEg9wc1ZqXBSkhx96xnD8C-vYEV-a09n2qliqpj35ce5Lfs2jLGYb9vojQ_U00jV3lJo5rPYQorx8QoIe6KOJvOtme0kv_kPanU4=</string>
 
     <string-array name="category_array">
         <item>Ordered</item>
         <item>History</item>
     </string-array>
+
+    <string-array name="number_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
 
 </resources>

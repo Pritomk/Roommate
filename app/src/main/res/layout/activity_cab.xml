@@ -9,281 +9,307 @@
         android:id="@+id/toolbar"
         layout="@layout/custom_toolbar"/>
 
-    <View
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="124dp"
-        android:background="@drawable/rounded_corner_bg"
-        android:backgroundTint="#9053A4A6"
-        android:layout_below="@id/toolbar"
-        android:layout_margin="8dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        android:padding="12dp">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="?attr/actionBarSize">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="35"
-                android:fontFamily="@font/ubuntu"
-                android:text="To"
-                android:textColor="@color/black"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="46dp"
-                android:layout_weight="65"
-                android:background="@drawable/searchbox_bg"
-                android:fontFamily="@font/ubuntu"
-                android:hint="Search Here"
-                android:padding="4dp"
-                android:textSize="24sp"
-                tools:text="Search Text"
-                android:textFontWeight="10"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="35"
-                android:fontFamily="@font/ubuntu"
-                android:text="From"
-                android:textColor="@color/black"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="46dp"
-                android:layout_weight="65"
-                android:background="@drawable/searchbox_bg"
-                android:fontFamily="@font/ubuntu"
-                android:hint="Search Here"
-                android:padding="4dp"
-                android:textSize="24sp"
-                tools:text="Search Text" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="14/06/2022"
-                android:textSize="24sp"
-                android:background="@drawable/rounded_corner_bg"
-                android:backgroundTint="@color/brown"
-                android:padding="8dp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/ubuntu"
-                android:layout_weight="40"
-                android:layout_gravity="center"/>
-
-            <View
-                android:layout_width="60dp"
-                android:layout_height="0dp"
-                android:layout_weight="20"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="2:30 pm"
-                android:textSize="24sp"
-                android:background="@drawable/rounded_corner_bg"
-                android:backgroundTint="@color/brown"
-                android:padding="8dp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/ubuntu"
-                android:layout_weight="40"
-                android:textAlignment="center"/>
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"
-            android:layout_marginTop="32dp"/>
-
-        <TextView
-            android:id="@+id/tv_app_setting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Car Type"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="12dp"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp">
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="#9053A4A6"
-                android:background="@drawable/rounded_corner_bg"/>
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <RadioButton
-                    android:id="@+id/radio_pirates"
-                    android:layout_width="124dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="24dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/radio_select_changer"
-                    android:checked="true"
-                    android:text="SUV"
-                    android:textSize="36sp"
-                    android:padding="4dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"/>
-
-                <RadioButton
-                    android:id="@+id/radio_ninjas"
-                    android:layout_width="124dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:background="@drawable/radio_select_changer"
-                    android:button="@android:color/transparent"
-                    android:text="Sudan"
-                    android:textSize="36sp"
-                    android:padding="4dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"/>
-            </RadioGroup>
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No. of Persons"
-                android:fontFamily="@font/ubuntu"
-                android:textSize="24sp"
-                android:textColor="@color/black"/>
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical"
+            android:padding="4dp">
 
             <RelativeLayout
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="3dp"
-                android:background="@drawable/rounded_corner_bg"
-                android:orientation="horizontal"
-                android:layout_marginStart="100dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <Spinner
-                    android:id="@+id/spinner1"
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:background="@android:color/transparent"
-                    android:gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:spinnerMode="dropdown"/>
+                    android:layout_height="124dp"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:backgroundTint="#AE68B5B5" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_arrow_drop_down_24" />
-
-            </RelativeLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Luggage"
-                android:fontFamily="@font/ubuntu"
-                android:textSize="24dp"
-                android:textColor="@color/black"/>
-
-            <RelativeLayout
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="3dp"
-                android:background="@drawable/rounded_corner_bg"
-                android:orientation="horizontal"
-                android:layout_marginStart="164dp">
-
-                <Spinner
-                    android:id="@+id/spinner2"
+                <LinearLayout
+                    android:id="@+id/ll1"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:background="@android:color/transparent"
-                    android:gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:spinnerMode="dropdown"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="35"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="To"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_search_box_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"
+                        android:layout_weight="65"
+                        android:background="@drawable/searchbox_bg"
+                        android:fontFamily="@font/ubuntu"
+                        android:hint="Search Here"
+                        android:padding="4dp"
+                        android:textFontWeight="10"
+                        android:textSize="20sp"
+                        tools:text="Search Text"
+                        android:focusable="false"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/ll1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="35"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="From"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_search_box_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"
+                        android:layout_weight="65"
+                        android:background="@drawable/searchbox_bg"
+                        android:fontFamily="@font/ubuntu"
+                        android:hint="Search Here"
+                        android:padding="4dp"
+                        android:textSize="20sp"
+                        tools:text="Search Text"
+                        android:focusable="false"/>
+                </LinearLayout>
+
+
 
             </RelativeLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:id="@+id/tv_date_text"
+                    android:layout_width="108dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="40"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:backgroundTint="@color/brown"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="14/06/2022" />
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="20" />
+
+                <TextView
+                    android:id="@+id/tv_time_text"
+                    android:layout_width="108dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="40"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:backgroundTint="@color/brown"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="2:30 pm" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_app_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"
+                android:text="Car Type"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:backgroundTint="#9053A4A6" />
+
+                <RadioGroup
+                    android:id="@+id/rg_car_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <RadioButton
+                        android:id="@+id/radio_pirates"
+                        android:layout_width="124dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/radio_select_changer"
+                        android:button="@android:color/transparent"
+                        android:checked="true"
+                        android:padding="4dp"
+                        android:text="SUV"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_ninjas"
+                        android:layout_width="124dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="@drawable/radio_select_changer"
+                        android:button="@android:color/transparent"
+                        android:padding="4dp"
+                        android:text="Sudan"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="No. of Persons"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_weight="50"/>
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:layout_weight="50">
+
+                    <Spinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Luggage"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    android:layout_weight="50"/>
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="164dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:orientation="horizontal"
+                    android:layout_weight="50">
+
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/login_click"
+                android:padding="10dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/login"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:background="@drawable/login_click"
-            android:padding="10dp"
-            android:text="Book Now"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:layout_marginTop="24dp"
-            android:layout_gravity="center_horizontal"/>
 
-    </LinearLayout>
+    </ScrollView>
+
+
+
 
 </RelativeLayout>
