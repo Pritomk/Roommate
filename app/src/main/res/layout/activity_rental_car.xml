@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".rentalCar.RentalCarActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <EditText
+                android:id="@+id/et_search_box_to"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/rounded_corner_bg"
+                android:backgroundTint="#D7AAECDD"
+                android:fontFamily="@font/ubuntu"
+                android:hint="Pick up location or address"
+                android:padding="8dp"
+                android:textSize="20sp"
+                tools:text="Search Text"
+                android:focusable="false"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:id="@+id/tv_date_text"
+                    android:layout_width="108dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="40"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:backgroundTint="@color/brown"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="14/06/2022" />
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="20" />
+
+                <TextView
+                    android:id="@+id/tv_time_text"
+                    android:layout_width="108dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="40"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:backgroundTint="@color/brown"
+                    android:fontFamily="@font/ubuntu"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="2:30 pm" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_app_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"
+                android:text="Car Type"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:backgroundTint="#9053A4A6" />
+
+                <RadioGroup
+                    android:id="@+id/rg_car_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <RadioButton
+                        android:id="@+id/radio_pirates"
+                        android:layout_width="124dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/radio_select_changer"
+                        android:button="@android:color/transparent"
+                        android:checked="true"
+                        android:padding="4dp"
+                        android:text="SUV"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_ninjas"
+                        android:layout_width="124dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="@drawable/radio_select_changer"
+                        android:button="@android:color/transparent"
+                        android:padding="4dp"
+                        android:text="Sudan"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="No. of Persons"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_weight="50"/>
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:layout_weight="50">
+
+                    <Spinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Luggage"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    android:layout_weight="50"/>
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="164dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:orientation="horizontal"
+                    android:layout_weight="50">
+
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/login_click"
+                android:padding="10dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

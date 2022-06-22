@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MergeRoommate"
         tools:targetApi="31">
         <activity
+            android:name=".RentalCarActivity"
+            android:exported="false" />
+        <activity
             android:name=".cab.CabActivity"
             android:exported="false" />
         <activity
