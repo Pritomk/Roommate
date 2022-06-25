@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.techmihirnaik.mergeroommate.cab.CabActivity
 import com.techmihirnaik.mergeroommate.databinding.FragmentHomeBinding
+import com.techmihirnaik.mergeroommate.rentalCar.RentalCarActivity
 import com.techmihirnaik.mergeroommate.schedule.ScheduleActivity
 
 
@@ -31,6 +32,10 @@ class HomeFragment : Fragment() {
         binding.ivCabBtn.setOnClickListener {
             val intent = Intent(requireContext(), CabActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.ivLaundry.setOnClickListener {
+            startActivity(Intent(requireContext(), RentalCarActivity::class.java))
         }
 
         return binding.root

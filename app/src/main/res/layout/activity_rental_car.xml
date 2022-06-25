@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".rentalCar.RentalCarActivity">
 
     <include
@@ -23,28 +22,19 @@
             android:orientation="vertical"
             android:padding="4dp">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <EditText
+                android:id="@+id/et_search_box_place"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="64dp"
-                android:layout_marginEnd="32dp"
-                android:hint="Enter something"
+                android:layout_height="52dp"
                 android:background="@drawable/searchbox_bg"
-                app:boxStrokeColor="@color/white">
-
-                <!--this is the actual edit text which takes the input-->
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edit_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:text="Text"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
+                android:fontFamily="@font/ubuntu"
+                android:hint="Pick up location or address"
+                android:padding="12dp"
+                android:textSize="20sp"
+                android:focusable="false"
+                android:layout_margin="8dp"
+                android:backgroundTint="#86AEAEAE"
+                tools:text="Kolkata"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -122,31 +112,48 @@
                     android:padding="8dp">
 
                     <RadioButton
-                        android:id="@+id/radio_pirates"
-                        android:layout_width="124dp"
+                        android:id="@+id/radio_mini"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="24dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="20"
                         android:background="@drawable/radio_select_changer"
                         android:button="@android:color/transparent"
                         android:checked="true"
                         android:padding="4dp"
-                        android:text="SUV"
+                        android:text="Mini"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="36sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
-                        android:id="@+id/radio_ninjas"
-                        android:layout_width="124dp"
+                        android:id="@+id/radio_sedan"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="20"
                         android:background="@drawable/radio_select_changer"
                         android:button="@android:color/transparent"
                         android:padding="4dp"
-                        android:text="Sudan"
+                        android:text="Sedan"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="36sp" />
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_suv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/radio_select_changer"
+                        android:button="@android:color/transparent"
+                        android:padding="4dp"
+                        android:text="SUV"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
                 </RadioGroup>
             </RelativeLayout>
 
@@ -158,19 +165,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="50"
                     android:fontFamily="@font/ubuntu"
                     android:text="No. of Persons"
                     android:textColor="@color/black"
-                    android:textSize="24sp"
-                    android:layout_weight="50"/>
+                    android:textSize="24sp" />
 
                 <RelativeLayout
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="100dp"
                     android:layout_marginEnd="3dp"
-                    android:background="@drawable/rounded_corner_bg"
-                    android:layout_weight="50">
+                    android:layout_weight="50"
+                    android:background="@drawable/rounded_corner_bg">
 
                     <Spinner
                         android:id="@+id/spinner1"
@@ -193,50 +200,6 @@
                 </RelativeLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/ubuntu"
-                    android:text="Luggage"
-                    android:textColor="@color/black"
-                    android:textSize="24dp"
-                    android:layout_weight="50"/>
-
-                <RelativeLayout
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="164dp"
-                    android:layout_marginEnd="3dp"
-                    android:background="@drawable/rounded_corner_bg"
-                    android:orientation="horizontal"
-                    android:layout_weight="50">
-
-                    <Spinner
-                        android:id="@+id/spinner2"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:background="@android:color/transparent"
-                        android:gravity="center"
-                        android:spinnerMode="dropdown" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_baseline_arrow_drop_down_24" />
-
-                </RelativeLayout>
-
-            </LinearLayout>
 
             <TextView
                 android:id="@+id/login"

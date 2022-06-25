@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".placeSearch.PlaceAutocompleteActivity">
+    
+    <SearchView
+        android:id="@+id/place_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:queryHint="Place or location"
+        android:background="@drawable/rounded_corner_bg"
+        android:backgroundTint="#77D5D5D5"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:iconifiedByDefault="false" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_place_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/place_search_view"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp" />
+
+
+
+</RelativeLayout>

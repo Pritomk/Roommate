@@ -22,6 +22,7 @@ import com.mmi.services.api.autosuggest.model.ELocation
 import com.mmi.services.api.autosuggest.model.SuggestedSearchAtlas
 import com.techmihirnaik.mergeroommate.R
 import com.techmihirnaik.mergeroommate.databinding.ActivityCabBinding
+import com.techmihirnaik.mergeroommate.placeSearch.PlaceAutocompleteActivity
 import java.text.DateFormat
 import java.util.*
 
@@ -40,6 +41,8 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     private val FROM_PLACE_REQUEST_CODE = 101
     private lateinit var calendar: Calendar
     private val TAG = "com.techmihirnaik.mergeroommate.cab.CabActivity"
+    private val PLACE_AUTOCOMPLETE_CODE_TO = 101
+    private val PLACE_AUTOCOMPLETE_CODE_FROM = 102
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,11 +65,13 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
         Places.initialize(this, getString(R.string.place_api_key))
 
         searchBoxTo.setOnClickListener {
-            fromSearchBoxFunction(it)
+            val intent = Intent(this, PlaceAutocompleteActivity::class.java)
+            startActivityForResult(intent, PLACE_AUTOCOMPLETE_CODE_TO)
         }
 
         searchBoxFrom.setOnClickListener {
-            fromSearchBoxFunction(it)
+            val intent = Intent(this, PlaceAutocompleteActivity::class.java)
+            startActivityForResult(intent, PLACE_AUTOCOMPLETE_CODE_FROM)
         }
 
         dateText.setOnClickListener {
@@ -167,35 +172,6 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
         timeText.text = selectedTime
     }
 
-    //place search box for to edittext
-//    private fun toSearchBoxFunction() {
-//        val placeOptions: PlaceOptions = PlaceOptions.builder()
-//            .location(MapmyIndiaPlaceWidgetSetting.instance.location)
-//            .filter(MapmyIndiaPlaceWidgetSetting.instance.filter)
-//            .hint(MapmyIndiaPlaceWidgetSetting.instance.hint)
-//            .saveHistory(MapmyIndiaPlaceWidgetSetting.instance.isEnableHistory)
-//            .enableTextSearch(MapmyIndiaPlaceWidgetSetting.instance.isEnableTextSearch)
-//            .pod(MapmyIndiaPlaceWidgetSetting.instance.pod)
-//            .attributionHorizontalAlignment(MapmyIndiaPlaceWidgetSetting.instance.signatureVertical)
-//            .attributionVerticalAlignment(MapmyIndiaPlaceWidgetSetting.instance.signatureHorizontal)
-//            .logoSize(MapmyIndiaPlaceWidgetSetting.instance.logoSize)
-//            .backgroundColor(resources.getColor(MapmyIndiaPlaceWidgetSetting.instance.backgroundColor))
-//            .toolbarColor(resources.getColor(MapmyIndiaPlaceWidgetSetting.instance.toolbarColor))
-//            .bridge(MapmyIndiaPlaceWidgetSetting.instance.isBridgeEnable)
-//            .hyperLocal(MapmyIndiaPlaceWidgetSetting.instance.isHyperLocalEnable)
-//            .build(PlaceOptions.MODE_CARDS)
-//
-//        val builder = PlaceAutocomplete.IntentBuilder()
-//        if (!MapmyIndiaPlaceWidgetSetting.instance.isDefault) {
-//            builder.placeOptions(placeOptions)
-//        } else {
-//            builder.placeOptions(PlaceOptions.builder().build(PlaceOptions.MODE_CARDS))
-//        }
-//        val placeAutocomplete = builder.build(this)
-//        startActivityForResult(placeAutocomplete, TO_PLACE_REQUEST_CODE)
-//
-//    }
-
     // place search box for from edittext
     private fun fromSearchBoxFunction(view: View) {
         //Initialize place field list
@@ -241,11 +217,14 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
 
                     }
                 }
-            } else if (requestCode == FROM_PLACE_REQUEST_CODE) {
-                // Initialize place
-                val place = Autocomplete.getPlaceFromIntent(data)
-                //set Address in edittext
-                searchBoxFrom.setText(place.address)
+            } else if (requestCode == PLACE_AUTOCOMPLETE_CODE_TO) {
+                data?.getStringExtra("cityName")
+                val address = data?.getStringExtra("address")
+                address?.let { searchBoxTo.setText(address) }
+            } else if (requestCode == PLACE_AUTOCOMPLETE_CODE_FROM) {
+                data?.getStringExtra("cityName")
+                val address = data?.getStringExtra("address")
+                address?.let { searchBoxFrom.setText(address) }
             }
         } else if (resultCode == AutocompleteActivity.RESULT_ERROR) {
             val status = data?.let { Autocomplete.getStatusFromIntent(it) }

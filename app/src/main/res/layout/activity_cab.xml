@@ -51,17 +51,18 @@
 
                     <EditText
                         android:id="@+id/et_search_box_to"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="46dp"
                         android:layout_weight="65"
                         android:background="@drawable/searchbox_bg"
                         android:fontFamily="@font/ubuntu"
-                        android:hint="Search Here"
+                        android:hint="Drop out location or address"
                         android:padding="4dp"
                         android:textFontWeight="10"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         tools:text="Search Text"
-                        android:focusable="false"/>
+                        android:focusable="false"
+                        android:maxLines="2"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -83,14 +84,14 @@
 
                     <EditText
                         android:id="@+id/et_search_box_from"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="46dp"
                         android:layout_weight="65"
                         android:background="@drawable/searchbox_bg"
                         android:fontFamily="@font/ubuntu"
-                        android:hint="Search Here"
+                        android:hint="Pick up location or address"
                         android:padding="4dp"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         tools:text="Search Text"
                         android:focusable="false"/>
                 </LinearLayout>
@@ -175,32 +176,50 @@
                     android:padding="8dp">
 
                     <RadioButton
-                        android:id="@+id/radio_pirates"
-                        android:layout_width="124dp"
+                        android:id="@+id/radio_mini"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="24dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="20"
                         android:background="@drawable/radio_select_changer"
                         android:button="@android:color/transparent"
                         android:checked="true"
                         android:padding="4dp"
-                        android:text="SUV"
+                        android:text="Mini"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="36sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
-                        android:id="@+id/radio_ninjas"
-                        android:layout_width="124dp"
+                        android:id="@+id/radio_sedan"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="20"
                         android:background="@drawable/radio_select_changer"
                         android:button="@android:color/transparent"
                         android:padding="4dp"
-                        android:text="Sudan"
+                        android:text="Sedan"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="36sp" />
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_suv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/radio_select_changer"
+                        android:button="@android:color/transparent"
+                        android:padding="4dp"
+                        android:text="SUV"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
                 </RadioGroup>
+
             </RelativeLayout>
 
             <LinearLayout

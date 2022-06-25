@@ -4,6 +4,7 @@
     package="com.techmihirnaik.mergeroommate">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +17,10 @@
         android:theme="@style/Theme.MergeRoommate"
         tools:targetApi="31">
         <activity
-            android:name=".RentalCarActivity"
+            android:name=".placeSearch.PlaceAutocompleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".rentalCar.RentalCarActivity"
             android:exported="false" />
         <activity
             android:name=".cab.CabActivity"
