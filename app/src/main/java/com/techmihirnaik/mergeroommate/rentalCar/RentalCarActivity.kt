@@ -13,6 +13,7 @@ import com.techmihirnaik.mergeroommate.cab.DatePicker
 import com.techmihirnaik.mergeroommate.databinding.ActivityRentalCarBinding
 import com.techmihirnaik.mergeroommate.placeSearch.PlaceAutocompleteActivity
 import java.text.DateFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
@@ -29,6 +30,9 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
     private lateinit var calendar: Calendar
     private val TAG = "com.techmihirnaik.mergeroommate.cab.CabActivity"
     private val PLACE_AUTOCOMPLETE_CODE = 101
+    private lateinit var rentalCarModel: RentalCar
+    private lateinit var dateString: String
+    private lateinit var timeString: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +40,7 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
         binding = ActivityRentalCarBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        rentalCarModel = RentalCar()
 
         searchBox = binding.etSearchBoxPlace
         dateText = binding.tvDateText
@@ -45,8 +50,8 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
 
         calendar = Calendar.getInstance()
 
-        dateText.text = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.time)
-        timeText.text = "${Calendar.HOUR}:${Calendar.MINUTE}"
+        dateString = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.time)
+        timeString = SimpleDateFormat("h:mm a", Locale.getDefault()).format(Date())
 
         Places.initialize(this, getString(R.string.place_api_key))
 
@@ -64,6 +69,12 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
         }
 
         setupSpinner()
+
+
+        //Assign model values
+        rentalCarModel.date = dateString
+        rentalCarModel.time = timeString
+
 
     }
 
@@ -133,10 +144,15 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
     }
 
     override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
-        calendar.set(Calendar.HOUR, p1)
-        calendar.set(Calendar.MINUTE, p2)
-        val selectedTime = "${p1}:${p2}"
-        timeText.text = selectedTime
+        var hourOfDay = p1
+        val AM_PM = if (p1 < 12) {
+            "AM"
+        } else {
+            hourOfDay = p1-12
+            "PM"
+        }
+        val time = "$hourOfDay : $p2 $AM_PM"
+        timeText.text = time
     }
 
 }

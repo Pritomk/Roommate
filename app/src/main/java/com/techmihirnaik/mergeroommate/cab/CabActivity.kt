@@ -1,29 +1,21 @@
 package com.techmihirnaik.mergeroommate.cab
 
-import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.*
 import android.widget.TimePicker
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.libraries.places.api.Places
-import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.Autocomplete
 import com.google.android.libraries.places.widget.AutocompleteActivity
-import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
-import com.mapmyindia.sdk.plugins.places.autocomplete.PlaceAutocomplete
-import com.mapmyindia.sdk.plugins.places.autocomplete.model.PlaceOptions
-import com.mmi.services.account.MapmyIndiaAccountManager
-import com.mmi.services.api.autosuggest.model.ELocation
-import com.mmi.services.api.autosuggest.model.SuggestedSearchAtlas
 import com.techmihirnaik.mergeroommate.R
 import com.techmihirnaik.mergeroommate.databinding.ActivityCabBinding
 import com.techmihirnaik.mergeroommate.placeSearch.PlaceAutocompleteActivity
 import java.text.DateFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
@@ -60,7 +52,7 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
         calendar = Calendar.getInstance()
 
         dateText.text = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.time)
-        timeText.text = "${Calendar.HOUR}:${Calendar.MINUTE}"
+        timeText.text = SimpleDateFormat("h:mm a", Locale.getDefault()).format(Date())
 
         Places.initialize(this, getString(R.string.place_api_key))
 
@@ -83,6 +75,14 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
         }
 
         setupSpinner()
+
+        binding.bookBtn.setOnClickListener {
+            bookFunc()
+        }
+
+    }
+
+    private fun bookFunc() {
 
     }
 
@@ -166,58 +166,25 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     }
 
     override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
-        calendar.set(Calendar.HOUR, p1)
-        calendar.set(Calendar.MINUTE, p2)
-        val selectedTime = "${p1}:${p2}"
-        timeText.text = selectedTime
-    }
+        var hourOfDay = p1
+        val AM_PM = if (p1 < 12) {
+            "AM"
+        } else {
+            hourOfDay = p1-12
+            "PM"
+        }
+        val time = "$hourOfDay : $p2 $AM_PM"
+        timeText.text = time
 
-    // place search box for from edittext
-    private fun fromSearchBoxFunction(view: View) {
-        //Initialize place field list
-        val fieldList = listOf(Place.Field.ADDRESS, Place.Field.LAT_LNG, Place.Field.NAME)
-
-        //Autocomplete intent
-        val intent = Autocomplete.IntentBuilder(
-            AutocompleteActivityMode.OVERLAY, fieldList
-        ).build(this)
-
-
-        //start intent with result code
-        startActivityForResult(intent, FROM_PLACE_REQUEST_CODE)
-
-    }
-
-    private fun mapInitialize() {
-        MapmyIndiaAccountManager.getInstance().restAPIKey = "87a22168-74dd-4620-91ff-5edb5193611c"
-        MapmyIndiaAccountManager.getInstance().mapSDKKey = R.string.map_sdk_key.toString()
-        MapmyIndiaAccountManager.getInstance().atlasClientId = R.string.client_id.toString()
-        MapmyIndiaAccountManager.getInstance().atlasClientSecret =
-            R.string.client_secret_key.toString()
     }
 
 
     //Intent activity result
-    @SuppressLint("LogNotTimber")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (resultCode == RESULT_OK) {
-            if (requestCode == TO_PLACE_REQUEST_CODE) {
-                val eLocation: ELocation? = PlaceAutocomplete.getPlace(data)
-                if (eLocation != null) {
-                    Log.d(
-                        TAG,
-                        "${eLocation.latitude?.toDouble()},${eLocation.longitude?.toDouble()}")
-                    Toast.makeText(this, "${eLocation.latitude?.toDouble()},${eLocation.longitude?.toDouble()}", Toast.LENGTH_SHORT).show()
-                } else {
-                    val suggestedSearchAtlas: SuggestedSearchAtlas? =
-                        PlaceAutocomplete.getSuggestedSearch(data)
-                    if (suggestedSearchAtlas != null) {
-
-                    }
-                }
-            } else if (requestCode == PLACE_AUTOCOMPLETE_CODE_TO) {
+            if (requestCode == PLACE_AUTOCOMPLETE_CODE_TO) {
                 data?.getStringExtra("cityName")
                 val address = data?.getStringExtra("address")
                 address?.let { searchBoxTo.setText(address) }

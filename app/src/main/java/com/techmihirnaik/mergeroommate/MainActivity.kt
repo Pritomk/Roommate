@@ -136,4 +136,13 @@ class MainActivity : AppCompatActivity() {
             .addToBackStack(Fragment::class.java.simpleName).commit()
     }
 
+    override fun onStart() {
+        super.onStart()
+        val sharedPreferencesClass = getSharedPreferences("user_todo", MODE_PRIVATE)
+        if (!sharedPreferencesClass.contains("access_token")) {
+            getMapMyIndiaToken()
+        }
+
+    }
+
 }
