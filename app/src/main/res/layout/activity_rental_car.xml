@@ -25,16 +25,18 @@
             <EditText
                 android:id="@+id/et_search_box_place"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/searchbox_bg"
                 android:fontFamily="@font/ubuntu"
                 android:hint="Pick up location or address"
                 android:padding="12dp"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:focusable="false"
                 android:layout_margin="8dp"
                 android:backgroundTint="#86AEAEAE"
-                tools:text="Kolkata"/>
+                tools:text="Kolkata"
+                android:maxLines="1"
+                android:singleLine="true"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,7 +46,7 @@
                 <TextView
                     android:id="@+id/tv_date_text"
                     android:layout_width="108dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_weight="40"
                     android:background="@drawable/rounded_corner_bg"
@@ -53,12 +55,9 @@
                     android:padding="8dp"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    tools:text="14/06/2022" />
-
-                <View
-                    android:layout_width="60dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="20" />
+                    tools:text="14/06/2022"
+                    android:layout_margin="8dp"
+                    android:gravity="center"/>
 
                 <TextView
                     android:id="@+id/tv_time_text"
@@ -72,7 +71,9 @@
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    tools:text="2:30 pm" />
+                    tools:text="2:30 pm"
+                    android:layout_margin="8dp"
+                    android:gravity="center"/>
             </LinearLayout>
 
             <View

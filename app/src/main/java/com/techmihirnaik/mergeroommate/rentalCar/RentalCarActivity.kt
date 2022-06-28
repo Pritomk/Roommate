@@ -71,8 +71,8 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
 
 
         //Assign model values
-        rentalCarModel.date = dateString
-        rentalCarModel.time = timeString
+        rentalCarModel.date = "Date"
+        rentalCarModel.time = "Time"
 
 
     }
