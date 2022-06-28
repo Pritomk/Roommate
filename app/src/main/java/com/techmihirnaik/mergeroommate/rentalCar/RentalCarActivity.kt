@@ -45,7 +45,6 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
         searchBox = binding.etSearchBoxPlace
         dateText = binding.tvDateText
         timeText = binding.tvTimeText
-        carTypeRG = binding.rgCarType
         personSpinner = binding.spinner1
 
         calendar = Calendar.getInstance()

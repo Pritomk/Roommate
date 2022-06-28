@@ -28,6 +28,7 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     private lateinit var timeText: TextView
     private lateinit var carTypeRG: RadioGroup
     private lateinit var personSpinner: Spinner
+    private lateinit var carTypeSpinner: Spinner
     private lateinit var luggageSpinner: Spinner
     private val TO_PLACE_REQUEST_CODE = 100
     private val FROM_PLACE_REQUEST_CODE = 101
@@ -45,9 +46,9 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
         searchBoxFrom = binding.etSearchBoxFrom
         dateText = binding.tvDateText
         timeText = binding.tvTimeText
-        carTypeRG = binding.rgCarType
-        personSpinner = binding.spinner1
-        luggageSpinner = binding.spinner2
+        carTypeSpinner = binding.spinner1
+        personSpinner = binding.spinner2
+        luggageSpinner = binding.spinner3
 
         calendar = Calendar.getInstance()
 
@@ -92,6 +93,20 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
         //Adapter for person spinner
         ArrayAdapter.createFromResource(
             this,
+            R.array.car_type_array,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            personSpinner.adapter = adapter
+        }
+        carTypeSpinner.onItemSelectedListener = carTypeSpinnerListener
+
+
+        //Adapter for person spinner
+        ArrayAdapter.createFromResource(
+            this,
             R.array.number_array,
             android.R.layout.simple_spinner_item
         ).also { adapter ->
@@ -132,6 +147,19 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
 
     //Person spinner listener
     private val personSpinnerListener: AdapterView.OnItemSelectedListener =
+        object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+
+        }
+
+    //Person spinner listener
+    private val carTypeSpinnerListener: AdapterView.OnItemSelectedListener =
         object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 

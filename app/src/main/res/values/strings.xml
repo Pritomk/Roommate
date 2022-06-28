@@ -14,6 +14,13 @@
         <item>History</item>
     </string-array>
 
+    <string-array name="car_type_array">
+        <item>Auto</item>
+        <item>Mini</item>
+        <item>Sedan</item>
+        <item>SUV</item>
+    </string-array>
+
     <string-array name="number_array">
         <item>1</item>
         <item>2</item>
