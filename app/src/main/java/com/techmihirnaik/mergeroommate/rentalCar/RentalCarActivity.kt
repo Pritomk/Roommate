@@ -52,7 +52,8 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
         dateString = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.time)
         timeString = SimpleDateFormat("h:mm a", Locale.getDefault()).format(Date())
 
-        Places.initialize(this, getString(R.string.place_api_key))
+        dateText.text = dateString
+        timeText.text = timeString
 
         searchBox.setOnClickListener {
             val intent = Intent(this, PlaceAutocompleteActivity::class.java)
@@ -71,8 +72,8 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
 
 
         //Assign model values
-        rentalCarModel.date = "Date"
-        rentalCarModel.time = "Time"
+        rentalCarModel.date = dateString
+        rentalCarModel.time = timeString
 
 
     }
