@@ -10,6 +10,7 @@ import android.widget.*
 import com.google.android.libraries.places.api.Places
 import com.techmihirnaik.mergeroommate.R
 import com.techmihirnaik.mergeroommate.cab.DatePicker
+import com.techmihirnaik.mergeroommate.cabChoice.CabChoiceActivity
 import com.techmihirnaik.mergeroommate.databinding.ActivityRentalCarBinding
 import com.techmihirnaik.mergeroommate.placeSearch.PlaceAutocompleteActivity
 import java.text.DateFormat
@@ -74,6 +75,10 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
         //Assign model values
         rentalCarModel.date = dateString
         rentalCarModel.time = timeString
+
+        binding.bookNow.setOnClickListener {
+            startActivity(Intent(this, CabChoiceActivity::class.java))
+        }
 
 
     }

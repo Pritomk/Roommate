@@ -17,6 +17,9 @@
         android:theme="@style/Theme.MergeRoommate"
         tools:targetApi="31">
         <activity
+            android:name=".cabChoice.CabChoiceActivity"
+            android:exported="false" />
+        <activity
             android:name=".placeSearch.PlaceAutocompleteActivity"
             android:exported="false" />
         <activity
