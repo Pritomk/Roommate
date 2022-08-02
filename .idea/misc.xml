@@ -4,47 +4,75 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable-v24/ic_baseline_search_24.xml" value="0.18" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable-v24/left_tv_bg.xml" value="0.168" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable-v24/spinner_bg.xml" value="0.18" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/book_btn_bg.xml" value="0.1795" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/button.xml" value="0.1" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/carview_bg.xml" value="0.1715" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/clickable_et_bg.xml" value="0.179" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.1845" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.181" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/ic_insta.xml" value="0.179" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/item_clicked.xml" value="0.107" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/login_button_bg.xml" value="0.1795" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/login_click.xml" value="0.184" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/logo_bg.xml" value="0.156" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/on_click_et_bg.xml" value="0.179" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/profile_layout_bg.xml" value="0.156" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/on_click_et_bg.xml" value="0.168" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/radio_select_changer.xml" value="0.168" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/rectangle_shape.xml" value="0.168" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/register_button_bg.xml" value="0.184" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/rounded_corner_bg.xml" value="0.179" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/scrollview_bg.xml" value="0.156" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/searchbox_bg.xml" value="0.179" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/ronded_corner_bg.xml" value="0.168" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/round.xml" value="0.168" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/rounded_corner_bg.xml" value="0.168" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/searchbox_bg.xml" value="0.168" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/selected_bg.xml" value="0.168" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/toolbar_bg.xml" value="0.1715" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/drawable/unselected_bg.xml" value="0.168" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/font/ubuntu.xml" value="0.284375" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout-v28/activity_cab.xml" value="0.253125" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_cab.xml" value="0.264" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_cab_choice.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_cab_copy.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_initial.xml" value="0.2" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_login.xml" value="0.16" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_notification.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_place_autocomplete.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_profile.xml" value="0.25025641025641027" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_rental_car.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/car_list_item_layout.xml" value="0.253125" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/activity_schedule.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/car_list_item_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/cardview.xml" value="0.1" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/custom_toolbar.xml" value="0.2" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/custom_toolbar.xml" value="0.264" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/fragment_my_trips.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/fragment_profile.xml" value="0.25025641025641027" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/fragment_trips.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/hotel_list_item.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/place_auto_complete_item_layout.xml" value="0.253125" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/profile_layout.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/profile_toolbar.xml" value="0.264" />
+        <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/layout/schedule.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/menu/bottommenu.xml" value="0.1" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/menu/menu.xml" value="0.1" />
         <entry key="..\:/Users/pritom/AndroidStudioProjects/MergeRoommate/app/src/main/res/menu/search_menu.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/addtravellers.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/button_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/c_baseline_home_work_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/count_night_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/counter_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/dateshape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/hotel.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_home_work_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_my_location_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_remove.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rectangle_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/round.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/select_india_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_initial.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/activity_notification.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/cardview.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/custom_toolbar.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/date_picker.xml" value="0.1539855072463768" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/schedule.xml" value="0.1539855072463768" />
+        <entry key="app/src/main/res/layout/search_hotels.xml" value="0.29257907542579076" />
+        <entry key="app/src/main/res/layout/travellers_add.xml" value="0.1539855072463768" />
       </map>
     </option>
   </component>

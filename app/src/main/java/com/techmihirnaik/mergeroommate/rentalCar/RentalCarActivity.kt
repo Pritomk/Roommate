@@ -3,11 +3,10 @@ package com.techmihirnaik.mergeroommate.rentalCar
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import com.google.android.libraries.places.api.Places
+import androidx.appcompat.app.AppCompatActivity
 import com.techmihirnaik.mergeroommate.R
 import com.techmihirnaik.mergeroommate.cab.DatePicker
 import com.techmihirnaik.mergeroommate.cabChoice.CabChoiceActivity
@@ -24,10 +23,7 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
     private lateinit var searchBox: EditText
     private lateinit var dateText: TextView
     private lateinit var timeText: TextView
-    private lateinit var carTypeRG: RadioGroup
     private lateinit var personSpinner: Spinner
-    private val TO_PLACE_REQUEST_CODE = 100
-    private val FROM_PLACE_REQUEST_CODE = 101
     private lateinit var calendar: Calendar
     private val TAG = "com.techmihirnaik.mergeroommate.cab.CabActivity"
     private val PLACE_AUTOCOMPLETE_CODE = 101
@@ -77,7 +73,20 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
         rentalCarModel.time = timeString
 
         binding.bookNow.setOnClickListener {
-            startActivity(Intent(this, CabChoiceActivity::class.java))
+            if (rentalCarModel.date == "")
+                dateText.error = "Please select date"
+            else if (rentalCarModel.time == "")
+                timeText.error = "Please select time"
+            else if (rentalCarModel.pickupLocation == "")
+                searchBox.error = "Please select address"
+            else {
+                val intent = Intent(this, CabChoiceActivity::class.java)
+                intent.putExtra("address", rentalCarModel.pickupLocation)
+                intent.putExtra("date", rentalCarModel.date)
+                intent.putExtra("time", rentalCarModel.time)
+                intent.putExtra("person", rentalCarModel.person)
+                startActivity(intent)
+            }
         }
 
 
@@ -91,7 +100,10 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
                 data?.getStringExtra("cityName")
                 val address = data?.getStringExtra("address")
                 Toast.makeText(this, address, Toast.LENGTH_SHORT).show()
-                address?.let { searchBox.setText(address) }
+                address?.let {
+                    searchBox.setText(address)
+                    rentalCarModel.pickupLocation = address
+                }
             }
         }
     }
@@ -116,11 +128,11 @@ class RentalCarActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
     private val personSpinnerListener: AdapterView.OnItemSelectedListener =
         object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-
+                rentalCarModel.person = resources.getIntArray(R.array.number_array)[p2]
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
-
+                rentalCarModel.person = resources.getIntArray(R.array.number_array)[0]
             }
 
         }
