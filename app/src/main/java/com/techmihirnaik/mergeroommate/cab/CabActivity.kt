@@ -8,9 +8,6 @@ import android.view.View
 import android.widget.*
 import android.widget.TimePicker
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.libraries.places.api.Places
-import com.google.android.libraries.places.widget.Autocomplete
-import com.google.android.libraries.places.widget.AutocompleteActivity
 import com.techmihirnaik.mergeroommate.R
 import com.techmihirnaik.mergeroommate.databinding.ActivityCabBinding
 import com.techmihirnaik.mergeroommate.placeSearch.PlaceAutocompleteActivity
@@ -54,8 +51,6 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
 
         dateText.text = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.time)
         timeText.text = SimpleDateFormat("h:mm a", Locale.getDefault()).format(Date())
-
-        Places.initialize(this, getString(R.string.place_api_key))
 
         searchBoxTo.setOnClickListener {
             val intent = Intent(this, PlaceAutocompleteActivity::class.java)
@@ -220,11 +215,6 @@ class CabActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
                 data?.getStringExtra("cityName")
                 val address = data?.getStringExtra("address")
                 address?.let { searchBoxFrom.setText(address) }
-            }
-        } else if (resultCode == AutocompleteActivity.RESULT_ERROR) {
-            val status = data?.let { Autocomplete.getStatusFromIntent(it) }
-            if (status != null) {
-                Toast.makeText(this, status.statusMessage, Toast.LENGTH_SHORT).show()
             }
         }
     }
